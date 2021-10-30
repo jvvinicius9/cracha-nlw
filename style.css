@@ -41,11 +41,21 @@ main {
   position: relative;
 }
 
+/* keyframe será responsavel pela configuração da animação do selo da rocket, junto da animation que irá aplicar essa animação */
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 .avatar span {
   position: absolute;
   top: -15px;
 
   z-index: 1;
+
+  animation: spin 15s linear infinite;
 }
 
 .avatar > img {
